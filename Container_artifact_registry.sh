@@ -1,7 +1,7 @@
 gcloud services enable artifactregistry.googleapis.com
 
 # Prompt user for Project ID
-read -p "Enter your Project ID: " PROJECT_ID
+PROJECT_ID=$(gcloud config get-value project 2>/dev/null)
 
 # Prompt user for Region
 read -p "Enter your Region (e.g., us-east1, us-west1, etc.): " REGION
